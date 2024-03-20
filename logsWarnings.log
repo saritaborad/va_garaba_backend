@@ -1,0 +1,85 @@
+{
+  level: 'warn',
+  message: 'HTTP GET /v1/api/ticketcategory/statics',
+  metadata: {
+    meta: {
+      req: {
+        url: '/v1/api/ticketcategory/statics',
+        headers: {
+          'user-agent': 'PostmanRuntime/7.33.0',
+          accept: '*/*',
+          'cache-control': 'no-cache',
+          'postman-token': '28bb2c03-f5a1-4894-a1e2-13a8b5179c9c',
+          host: 'localhost:8000',
+          'accept-encoding': 'gzip, deflate, br',
+          connection: 'keep-alive',
+          cookie: 'token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIxMTExMTIyMjIyIiwiaWF0IjoxNjk1NzkwODc0LCJleHAiOjE2OTY1Njg0NzR9.52Y1wDLSsl2qlbgWsedOcPeeGiGkOkEfU9UhYvacAlc'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/v1/api/ticketcategory/statics',
+        query: {}
+      },
+      res: { statusCode: 403 },
+      responseTime: 11
+    },
+    timestamp: '2023-09-27T05:50:49.032Z'
+  }
+}
+{
+  level: 'warn',
+  message: 'HTTP GET /v1/api/ticketcategory/statics',
+  metadata: {
+    meta: {
+      req: {
+        url: '/v1/api/ticketcategory/statics',
+        headers: {
+          'user-agent': 'PostmanRuntime/7.33.0',
+          accept: '*/*',
+          'cache-control': 'no-cache',
+          'postman-token': '11e915e9-0f6f-487a-b393-a3965de1fde6',
+          host: 'localhost:8000',
+          'accept-encoding': 'gzip, deflate, br',
+          connection: 'keep-alive',
+          cookie: 'token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIxMTExMTIyMjIyIiwiaWF0IjoxNjk1NzkwODc0LCJleHAiOjE2OTY1Njg0NzR9.52Y1wDLSsl2qlbgWsedOcPeeGiGkOkEfU9UhYvacAlc'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/v1/api/ticketcategory/statics',
+        query: {}
+      },
+      res: { statusCode: 403 },
+      responseTime: 7
+    },
+    timestamp: '2023-09-27T05:51:45.658Z'
+  }
+}
+{
+  level: 'warn',
+  message: 'HTTP GET /v1/api/guard/scanlogs',
+  metadata: {
+    meta: {
+      req: {
+        url: '/v1/api/guard/scanlogs',
+        headers: {
+          token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIxMTExMTIyMjIyIiwiaWF0IjoxNjk1NzkwODc0LCJleHAiOjE2OTY1Njg0NzR9.52Y1wDLSsl2qlbgWsedOcPeeGiGkOkEfU9UhYvacAlc',
+          'user-agent': 'PostmanRuntime/7.33.0',
+          accept: '*/*',
+          'cache-control': 'no-cache',
+          'postman-token': '3ac71384-ed70-45e3-9514-7a2d655a330f',
+          host: 'localhost:8000',
+          'accept-encoding': 'gzip, deflate, br',
+          connection: 'keep-alive',
+          cookie: 'token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIxMTExMTIyMjIyIiwiaWF0IjoxNjk1NzkwODc0LCJleHAiOjE2OTY1Njg0NzR9.52Y1wDLSsl2qlbgWsedOcPeeGiGkOkEfU9UhYvacAlc'
+        },
+        method: 'GET',
+        httpVersion: '1.1',
+        originalUrl: '/v1/api/guard/scanlogs',
+        query: {}
+      },
+      res: { statusCode: 403 },
+      responseTime: 77
+    },
+    timestamp: '2023-09-27T05:52:18.736Z'
+  }
+}

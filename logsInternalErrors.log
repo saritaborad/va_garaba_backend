@@ -1,0 +1,12 @@
+2023-09-27T05:52:18.753Z error: uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at new NodeError (node:internal/errors:405:5)
+    at ServerResponse.setHeader (node:_http_outgoing:648:11)
+    at ServerResponse.header (C:\Users\varni\Documents\GitHub\sarsana_navratri_beckend\node_modules\express\lib\response.js:767:10)
+    at ServerResponse.send (C:\Users\varni\Documents\GitHub\sarsana_navratri_beckend\node_modules\express\lib\response.js:170:12)
+    at done (C:\Users\varni\Documents\GitHub\sarsana_navratri_beckend\node_modules\express\lib\response.js:1004:10)
+    at tryHandleCache (C:\Users\varni\Documents\GitHub\sarsana_navratri_beckend\node_modules\ejs\lib\ejs.js:260:5)
+    at exports.renderFile [as engine] (C:\Users\varni\Documents\GitHub\sarsana_navratri_beckend\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (C:\Users\varni\Documents\GitHub\sarsana_navratri_beckend\node_modules\express\lib\view.js:135:8)
+    at tryRender (C:\Users\varni\Documents\GitHub\sarsana_navratri_beckend\node_modules\express\lib\application.js:640:10)
+    at Function.render (C:\Users\varni\Documents\GitHub\sarsana_navratri_beckend\node_modules\express\lib\application.js:592:3)

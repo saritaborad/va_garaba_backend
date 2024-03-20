@@ -1,0 +1,26 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello World
+        run: echo helloo world asdads
+
+      - name: Deploying using ssh
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOSTNAME }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: 22
+          script: |
+            cd /var/www/digieventprod/sarsana_navratri_beckend
+            sudo rm -rf node_modules
+            sudo git pull
+            sudo yarn install
+            pm2 list
+            pm2 restart 0

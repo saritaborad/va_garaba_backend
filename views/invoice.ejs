@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .eventMainPage {
+            max-width: 600px;
+            width: 95%;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .eventImage {
+            display: flex;
+            justify-content: center;
+            /* height: 200px;
+        border: 1px solid black; */
+        }
+
+        .invoiceText h1 {
+            color: #d0262a;
+        }
+
+        .nameandlogo {
+            display: flex;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Logo start */
+        .eventLogo {
+            margin-left: auto;
+        }
+
+        .eventLogo h3 {
+            font-style: normal;
+        }
+
+        .eventLogo span {
+            background-color: #df381d;
+            color: #ffffff;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .eventLogo p {
+            text-align: end;
+            font-size: small;
+        }
+
+        /* Logo end */
+        .invoiceDetails {
+            display: flex;
+            padding-top: 20px;
+        }
+
+        .invoiceData li {
+            list-style-type: none;
+            font-size: 16px;
+            margin-right: 10px;
+            line-height: 27px;
+        }
+
+        .gstNo {
+            margin-left: auto;
+        }
+
+        .gstNo h4 {
+            font-size: 14px;
+        }
+
+        .gstNo i {
+            font-size: 12px;
+            padding-top: 5px;
+        }
+
+        /* Table Start */
+        .dataTable {
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .amountData {
+            width: 100%;
+        }
+
+        .billInfo th {
+            background-color: #d0262a;
+            color: white;
+            padding: 7px;
+        }
+
+        .billData td {
+            text-align: center;
+            padding-top: 10px;
+            font-size: 16px;
+        }
+
+        .totalAmount {
+            margin-top: 100px;
+            border-top: 5px solid #d0262a;
+        }
+
+        .totalAmount {
+            display: flex;
+            padding-top: 5px;
+        }
+
+        .totalAmount b {
+            font-size: 16px;
+            margin-left: auto;
+        }
+
+        .totalAmount p {
+            margin-left: 40px;
+            font-size: 16px;
+        }
+
+        /* Table End */
+
+        /* eventInfo Start */
+        .eventInfo {
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+
+        .phoneNumber {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        }
+
+        .mail {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        }
+
+        .address {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        }
+
+        .webSite {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        }
+
+        .callIcone {
+            background-color: #d0262a;
+            margin-right: 7px;
+            padding: 4px;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mailIcone {
+            background-color: #d0262a;
+            margin-right: 7px;
+            padding: 4px;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .addressIcone {
+            background-color: #d0262a;
+            margin-right: 7px;
+            padding: 4px;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .webSiteIcone {
+            background-color: #d0262a;
+            margin-right: 7px;
+            padding: 4px;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* eventInfo End */
+    </style>
+</head>
+
+<body>
+    <div class="eventMainPage">
+        <div class="eventInvoice">
+            <div class="nameandlogo">
+                <div class="invoiceText">
+                    <h1>INVOICE</h1>
+                </div>
+                <div class="eventLogo">
+                    <h3>THE<span>ME</span>MORIES</h3>
+                    <p>EVENT</p>
+                    <p>By Keval Jasoliya</p>
+                </div>
+            </div>
+            <hr />
+            <div class="invoiceDetails">
+                <ul class="invoiceData">
+                    <li>Invoice to</li>
+                    <li>Transection ID</li>
+                    <li>Invoice ID</li>
+                    <li>Date</li>
+                </ul>
+                <ul class="invoiceData">
+                    <li>: <%= name %>
+                    </li>
+                    <li>: <%= transaction_Id %>
+                    </li>
+                    <li>: <%= billdesk_order_id %>
+                    </li>
+                    <li>: <%= createdAt %>
+                    </li>
+                </ul>
+                <% if (gstin && gstin.length> 0) { %>
+                    <div class="gstNo">
+                        <h4>GST No: <%= gstin %>
+                        </h4>
+                        <i>*ALL PRICING GST INCLUSIVE</i>
+                    </div>
+                    <% } %>
+            </div>
+            <div class="dataTable">
+                <table class="amountData">
+                    <tr class="billInfo">
+                        <th>NO.</th>
+                        <th>DESCRIPTIONS</th>
+                        <th>QTY</th>
+                        <th>PRICE</th>
+                        <th>AMOUNT</th>
+                    </tr>
+                    <% for (let i=0; i < tickets.length; i++) { %>
+                        <tr class="billData">
+                            <td>1</td>
+                            <td>
+                                <%= tickets[i].ticket_name %>
+                            </td>
+                            <td>
+                                <%= tickets[i].qty %>
+                            </td>
+                            <td>
+                                <%= tickets[i].price %> INR
+                            </td>
+                            <td>
+                                <%= tickets[i].qty * tickets[i].price %> INR
+                            </td>
+                        </tr>
+                        <% } %>
+                            <% for (let i=0; i < twoWheelers.length; i++) { %>
+                                <tr class="billData">
+                                    <td>1</td>
+                                    <td>
+                                        <%= twoWheelers[i].parking_name %>
+                                    </td>
+                                    <td>
+                                        <%= twoWheelers[i].qty %>
+                                    </td>
+                                    <td>
+                                        <%= twoWheelers[i].price %> INR
+                                    </td>
+                                    <td>
+                                        <%= twoWheelers[i].qty * twoWheelers[i].price %> INR
+                                    </td>
+                                </tr>
+                                <% } %>
+                                    <% for (let i=0; i < fourWheelers.length; i++) { %>
+                                        <tr class="billData">
+                                            <td>1</td>
+                                            <td>
+                                                <%= fourWheelers[i].parking_name %>
+                                            </td>
+                                            <td>
+                                                <%= fourWheelers[i].qty %>
+                                            </td>
+                                            <td>
+                                                <%= fourWheelers[i].price %> INR
+                                            </td>
+                                            <td>
+                                                <%= fourWheelers[i].qty * fourWheelers[i].price %> INR
+                                            </td>
+                                        </tr>
+                                        <% } %>
+
+                </table>
+            </div>
+            <div class="totalAmount">
+                <b>Total</b>
+                <p>
+                    <%= amount %>INR
+                </p>
+            </div>
+        </div>
+        <div class="eventInfo">
+            <div class="phoneNumber">
+                <div class="callIcone">
+                    <svg width="15px" height="15px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M17.3545 22.2323C15.3344 21.7262 11.1989 20.2993 7.44976 16.5502C3.70065 12.8011 2.2738 8.66559 1.76767 6.6455C1.47681 5.48459 2.00058 4.36434 2.88869 3.72997L5.21694 2.06693C6.57922 1.09388 8.47432 1.42407 9.42724 2.80051L10.893 4.91776C11.5152 5.8165 11.3006 7.0483 10.4111 7.68365L9.24234 8.51849C9.41923 9.1951 9.96939 10.5846 11.6924 12.3076C13.4154 14.0306 14.8049 14.5807 15.4815 14.7576L16.3163 13.5888C16.9517 12.6994 18.1835 12.4847 19.0822 13.1069L21.1995 14.5727C22.5759 15.5257 22.9061 17.4207 21.933 18.783L20.27 21.1113C19.6356 21.9994 18.5154 22.5232 17.3545 22.2323ZM8.86397 15.136C12.2734 18.5454 16.0358 19.8401 17.8405 20.2923C18.1043 20.3583 18.4232 20.2558 18.6425 19.9488L20.3056 17.6205C20.6299 17.1665 20.5199 16.5348 20.061 16.2171L17.9438 14.7513L17.0479 16.0056C16.6818 16.5182 16.0047 16.9202 15.2163 16.7501C14.2323 16.5378 12.4133 15.8569 10.2782 13.7218C8.1431 11.5867 7.46219 9.7677 7.24987 8.7837C7.07977 7.9953 7.48181 7.31821 7.99439 6.95208L9.24864 6.05618L7.78285 3.93893C7.46521 3.48011 6.83351 3.37005 6.37942 3.6944L4.05117 5.35744C3.74413 5.57675 3.64162 5.89565 3.70771 6.15943C4.15989 7.96418 5.45459 11.7266 8.86397 15.136Z"
+                            fill="#ffffff" />
+                    </svg>
+                </div>
+                <p>+91-99099 99582</p>
+            </div>
+            <div class="mail">
+                <div class="mailIcone">
+                    <svg width="15px" height="15px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <title />
+
+                        <g id="Complete">
+                            <g id="mail">
+                                <g>
+                                    <polyline fill="none" points="4 8.2 12 14.1 20 8.2" stroke="#ffffff"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+
+                                    <rect fill="none" height="14" rx="2" ry="2" stroke="#ffffff" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" width="18" x="3" y="6.5" />
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <p>admin@thememoriesevent.com</p>
+            </div>
+            <div class="address">
+                <div class="addressIcone">
+                    <svg width="15px" height="15px" viewBox="0 0 128 128" data-name="Layer 4" id="Layer_4"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #ffffff;
+                                }
+                            </style>
+                        </defs>
+                        <path class="cls-1"
+                            d="M64,30.17,96.64,62.81V102H31.36V62.81L64,30.17M64,16,21.36,58.67V112h85.28V58.67L64,16Z" />
+                        <rect class="cls-1" height="38.37" width="19.19" x="54.41" y="73.59" />
+                    </svg>
+                </div>
+                <p>Elephant Business Hub, Katargam, Surat, Gujarat -395004</p>
+            </div>
+            <div class="webSite">
+                <div class="webSiteIcone">
+                    <svg width="15px" height="15px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"
+                        stroke-width="3" stroke="#ffffff" fill="none">
+                        <circle cx="32" cy="32" r="24.86" />
+                        <path d="M32,6.84A34.09,34.09,0,0,1,43.66,32.31c0,16.19-7.28,21-11.66,24.24" />
+                        <path d="M32,6.84A34.09,34.09,0,0,0,20.31,32.31c0,16.19,7.28,21,11.66,24.24" />
+                        <line x1="10.37" y1="19.75" x2="53.75" y2="19.75" />
+                        <line x1="32" y1="6.84" x2="32" y2="56.55" />
+                        <line x1="11.05" y1="45.33" x2="52.98" y2="45.33" />
+                        <line x1="7.14" y1="32.31" x2="56.86" y2="31.69" />
+                    </svg>
+                </div>
+                <p>www.thememoriesevent.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
